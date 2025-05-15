@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.png">
+  <meta name="theme-color" content="#3494e6">
+
+</head>
+<body>
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="themeSwitcher" />
+      <span class="slider"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  <div class="card" id="converterCard">
+    <h2>🌡️ Temperature Converter</h2>
+
+    <div class="input-container">
+      <label for="temperature">Enter Temperature:</label>
+      <input type="number" id="temperature" placeholder="Type a number" aria-label="Temperature input" />
+    </div>
+
+    <div class="input-container">
+      <label for="unit">Convert from:</label>
+      <select id="unit" aria-label="Select unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+        <option value="kelvin">Kelvin</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button id="convertBtn">Convert</button>
+      <button id="resetBtn">Reset</button>
+      <button id="speakBtn">🔊 Speak</button>
+    </div>
+
+    <div id="result" aria-live="polite"></div>
+    <div id="indicator"></div>
+    <h3>History</h3>
+    <ul id="history"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
